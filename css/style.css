@@ -13,14 +13,18 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
-
 /* Common */
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  height: 100%;
 }
 
 .visually-hidden {
@@ -37,8 +41,23 @@ body {
 }
 
 .wrapper {
-  width: 1200px;
   margin: 0 auto;
+  width: 1200px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  flex-shrink: 0;
+}
+
+.page-content {
+  flex-grow: 1;
+}
+
+.page-footer {
+  flex-shrink: 0;
 }
 
 .button {
@@ -110,6 +129,7 @@ body {
 .site-nav__link--active::after {
   content: "";
   position: absolute;
+  z-index: 1;
   display: block;
   height: 2px;
   left: 8px;
@@ -135,6 +155,7 @@ body {
 
 .site-logo {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -230,4 +251,33 @@ body {
 
 .user-nav__button:active {
   color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+/* Welcome */
+
+.welcome {
+  width: 1200px;
+  height: 485px;
+  display: flex;
+  position: relative;
+
+  background-color: #8EBBD2;
+  background-image: url("../img/index/index-background.jpg");
+}
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  background-image: url("../img/index/divider.svg");
+  bottom: 0;
+  left: 0;
+}
+
+.welcome__img {
+  width: 458px;
+  height: 352px;
+  margin: 51px auto 82px;
 }
