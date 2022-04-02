@@ -60,10 +60,6 @@ body {
   flex-grow: 1;
 }
 
-.page-footer {
-  flex-shrink: 0;
-}
-
 .button {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -186,11 +182,15 @@ body {
   z-index: 1;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
+  margin-left: -69px;
 }
 
 .site-logo:focus {
   outline-color: #83b3d3;
+  transform: scale(1.5);
+  margin-top: 18px;
+  transition: all 0.5s ease-in;
 }
 
 .user-nav {
@@ -520,4 +520,109 @@ body {
   border-radius: 0 10px 10px 0;
   font-size: 20px;
   line-height: 26px;
+}
+
+/* Footer */
+
+.page-footer {
+  padding-top: 25px;
+  padding-bottom: 28px;
+  padding-left: 61px;
+  padding-right: 49.5px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.social {
+  margin: 0;
+  margin-top: 13px;
+  margin-right: 187px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 40px);
+  gap: 4px;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  fill: #83B3D3;
+  box-sizing: border-box;
+}
+
+.social__link:hover {
+  fill: #68A2CA;
+}
+
+.social__link:focus {
+  fill: #68A2CA;
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
+  outline: none;
+}
+
+.social__link:active {
+  fill: #68A2CA;
+  opacity: 0.3;
+  border: none;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 40px;
+  margin-right: auto;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  padding: 12px;
+  padding-top: 9px;
+  border: 3px solid transparent;
+}
+
+.contacts a:hover {
+  color: #756257;
+}
+
+.contacts a:focus {
+  color: #756257;
+  border-radius: 10px;
+  border-color: #83B3D3;
+  outline: none;
+}
+
+.contacts a:active {
+  color: rgba(117, 98, 87, 0.3);
+  border-color: transparent;
+}
+
+.author {
+  padding: 14px 19px;
+  border: 3px solid transparent;
+}
+
+.author:hover {
+  fill: #756257;
+}
+
+.author:focus {
+  fill: #756257;
+  border-color: #83b3d3;
+}
+
+.author:active {
+  border-color: transparent;
+  opacity: 0.3;
+}
+.author svg {
+  display: block;
 }
