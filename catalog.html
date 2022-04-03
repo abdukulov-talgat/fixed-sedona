@@ -67,7 +67,7 @@
         </ol>
         <section class="filter">
           <h2 class="visually-hidden">Фильтр гостиниц</h2>
-          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get" id="filter-form">
             <fieldset class="filter-form__fieldset">
               <legend class="filter-form__legend">Инфраструктура:</legend>
               <label class="control filter-form__control">
@@ -137,6 +137,30 @@
           </form>
         </section>
       </div>
+      <section class="sort">
+        <h2 class="visually-hidden">Сортировка гостиниц</h2>
+        <p class="sort__count">Найдено гостиниц: 38</p>
+        <label class="control-select sort__select">
+          <select class="control-select__select" name="order" form="filter-form">
+            <option value="cheap" selected>Сначала дешёвые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="popular">Сначала популярные</option>
+          </select>
+          <span class="visually-hidden">Порядок сортировки</span>
+        </label>
+
+        <ul class="views sort__views">
+          <li>
+            <a class="views__link" href="#"><span class="visually-hidden">Показать карточками</span></a>
+          </li>
+          <li>
+            <a class="views__link views__link--slide" href="#"><span class="visually-hidden">Показать подробно</span></a>
+          </li>
+          <li>
+            <a class="views__link views__link--list views__link--active" href="#"><span class="visually-hidden">Показать списком</span></a>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -188,4 +212,5 @@
   </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>

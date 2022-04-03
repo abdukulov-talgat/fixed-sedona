@@ -759,7 +759,6 @@ body {
   background-position: center;
 }
 
-/* Filter */
 
 /* Filter-form */
 .filter-form {
@@ -988,4 +987,112 @@ body {
 .range-slider__toggler:active {
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
   outline: 2px solid #83b3d3;
+}
+
+/* Sort */
+
+.sort {
+  padding: 44px 72px;
+  padding-left: 71px;
+  display: flex;
+  align-items: center;
+}
+
+.sort__count {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  margin-right: auto;
+}
+
+.sort__select {
+  margin-right: 81px;
+}
+
+.control-select {
+  display: block;
+  position: relative;
+  width: 287px;
+}
+
+.control-select::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  background-image: url("../img/icons/icon-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  right: 19px;
+  transform: translateY(-50%);
+  opacity: 0.3;
+}
+
+.control-select__select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 23px;
+  color: inherit;
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+  appearance: none;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  padding-left: 17px;
+  padding-right: 31px;
+  outline: none;
+}
+
+.control-select__select:hover,
+.control-select__select:focus {
+  border-color: #83b3d3;
+}
+
+.control-select__select:active {
+  border-color: #e6e6e6;
+  color: rgba(51, 51, 51, 0.3);
+}
+
+.views {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  gap: 8px;
+}
+
+.views__link {
+  width: 48px;
+  height: 48px;
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid #e6e6e6;
+  background-image: url("../img/icons/icon-tile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.views__link--slide {
+  background-image: url("../img/icons/icon-slideshow.svg");
+}
+
+.views__link--list {
+  background-image: url("../img/icons/icon-list.svg");
+}
+
+.views__link:hover,
+.views__link:focus {
+  border-color: #83b3d3;
+}
+
+.views__link--active {
+  border-color: #000000;
 }
