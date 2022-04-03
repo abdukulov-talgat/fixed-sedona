@@ -556,8 +556,7 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.newsletter__input:active,
-.newsletter__input:focus:not(:placeholder-shown) {
+.newsletter__input--active {
   outline: none;
   background-color: #ffffff;
   border-color: #000000;
@@ -868,14 +867,17 @@ body {
   margin-bottom: 28px;
 }
 
-.range-slider__inputs::after {
-  content: "";
+.range-slider__border {
   position: absolute;
   width: 2px;
   height: 100%;
+  top: -3px;
   left: 50%;
-  margin-left: -1px;
   background-color: #ffffff;
+
+  transform: translateX(-50%);
+  background-clip: padding-box;
+  border: 3px solid transparent;
 }
 
 .range-slider__label {
@@ -916,9 +918,10 @@ body {
 .range-slider__input:focus {
   box-shadow: 0 0 0 3px #81b3d2,
     inset 0 0 0 3px #81b3d2;
+  border-color: #ffffff;
 }
 
-.range-slider__input:active {
+.range-slider__input--active {
   background-color: #756257;
   border-color: #ffffff;
   box-shadow: none;
@@ -966,8 +969,23 @@ body {
   border: none;
   background-color: #ffffff;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .range-slider__toggler--max {
   right: 0;
+}
+
+.range-slider__toggler:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-slider__toggler:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  outline: 3px solid #83b3d3;
+}
+
+.range-slider__toggler:active {
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+  outline: 2px solid #83b3d3;
 }
