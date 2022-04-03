@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
@@ -57,14 +58,82 @@
         <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link breadcrumbs__link--home" href="#"><span class="visually-hidden">На главную страницу</span></a>
+            <a class="breadcrumbs__link breadcrumbs__link--home" href="#"><span class="visually-hidden">На главную
+                страницу</span></a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="#">Гостиницы</a>
           </li>
         </ol>
         <section class="filter">
-
+          <h2 class="visually-hidden">Фильтр гостиниц</h2>
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Инфраструктура:</legend>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="checkbox" name="pool" checked>
+                <span class="control__mark"></span>
+                Бассейн
+              </label>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="checkbox" name="parking" checked>
+                <span class="control__mark"></span>
+                Парковка
+              </label>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="checkbox" name="wifi">
+                <span class="control__mark"></span>
+                Wi-Fi
+              </label>
+            </fieldset>
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Тип жилья:</legend>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="radio" name="type" value="hotel" checked>
+                <span class="control__mark"></span>
+                Гостиница
+              </label>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="radio" name="type" value="motel">
+                <span class="control__mark"></span>
+                Мотель
+              </label>
+              <label class="control filter-form__control">
+                <input class="control__input visually-hidden" type="radio" name="type" value="apartments">
+                <span class="control__mark"></span>
+                Апартаменты
+              </label>
+            </fieldset>
+            <fieldset class="filter-form__fieldset">
+              <legend class="filter-form__legend">Стоимость, ₽:</legend>
+              <div class="range-slider">
+                <div class="range-slider__inputs">
+                  <label class="range-slider__label">
+                    <input class="range-slider__input range-slider__input--min" type="number" name="min-price" value="0">
+                    <span class="range-slider__placeholder">от</span>
+                  </label>
+                  <label class="range-slider__label">
+                    <input class="range-slider__input range-slider__input--max" type="number" name="min-price" value="9000">
+                    <span class="range-slider__placeholder">до</span>
+                  </label>
+                </div>
+                <div class="range-slider__range">
+                  <div class="range-slider__indicator" style="left:0; width:236px;">
+                    <button class="range-slider__toggler range-slider__toggler--min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-slider__toggler range-slider__toggler--max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="filter-form__buttons">
+              <button class="button button--coldlight filter-form__submit" type="submit">Применить</button>
+              <button class="filter-form__reset" type="button">Сбросить</button>
+            </div>
+          </form>
         </section>
       </div>
     </main>
