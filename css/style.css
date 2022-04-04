@@ -313,6 +313,7 @@ body {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .user-nav__item:last-child {
@@ -1359,3 +1360,132 @@ body {
   color: #000000;
 }
 
+/* Popup */
+
+.popup {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  box-sizing: border-box;
+  width: 400px;
+  top: calc(100% + 11px);
+  left: 21px;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.popup--open {
+  display: block;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 9px;
+  background-image: url("../img/icons/icon-triangle.svg");
+  top: -8px;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.popup__list {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 24px 24px 0;
+  list-style: none;
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+}
+
+.popup__item {
+  display: grid;
+  grid-template-columns: auto 16px;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 25px;
+}
+
+.popup__item:last-child {
+  margin-bottom: 0;
+}
+
+.popup__link {
+  text-decoration: none;
+  color: inherit;
+  display: grid;
+  grid-template-columns: 48px auto;
+  column-gap: 17px;
+  border-radius: 3px;
+}
+
+.popup__link:hover {
+  opacity: 0.6;
+}
+
+.popup__link:focus {
+  outline: 3px solid #83b3d3;
+  outline-offset: 7px;
+}
+
+.popup__link:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+.popup__img {
+  grid-row: span 2;
+}
+
+.popup__title {
+  color: #000000;
+  align-self: center;
+}
+
+.popup__text {
+  font-size: 16px;
+}
+
+.popup__delete {
+  margin-top: 7px;
+  border: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-image: url("../img/icons/icon-delete.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: 0.2;
+  outline-offset: 7px;
+  border-radius: 2px;
+}
+
+.popup__delete:hover {
+  opacity: 1;
+}
+
+.popup__delete:focus {
+  opacity: 1;
+  outline: 3px solid #83b3d3;
+}
+
+.popup__delete:active {
+  opacity: 0.1;
+  outline: none;
+}
+
+.popup__all-favorite {
+  width: 100%;
+  padding-top: 19.5px;
+  padding-bottom: 19.5px;
+  border-radius: 0;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
