@@ -544,12 +544,13 @@ body {
 /* Newsletter */
 
 .newsletter {
-  padding: 92px 0 94px;
+  padding: 87px 0 138px;
 }
 
 .newsletter--index {
   background-image: url("../img/index/newsletter-bg.jpg");
   color: #ffffff;
+  padding: 92px 0 94px;
 }
 
 .newsletter__info {
@@ -1079,6 +1080,10 @@ body {
   opacity: 0.3;
 }
 
+.control-select__label {
+  align-self: center;
+}
+
 .control-select__select {
   font-family: inherit;
   font-size: inherit;
@@ -1271,11 +1276,6 @@ body {
   box-sizing: border-box;
 }
 
-.products__container {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e6e6e6;
-}
-
 .products__load-more {
   font-size: 20px;
   line-height: 26px;
@@ -1283,4 +1283,79 @@ body {
   padding: 14.5px;
   width: 625px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
+
+.products__container {
+  border-top: 1px solid #e6e6e6;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products__control-select {
+  display: flex;
+  width: 500px;
+}
+
+.products__control-select .control-select__label {
+  margin-right: 51px;
+  margin-left: auto;
+}
+
+.products__control-select .control-select__select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+/* Paginator */
+.paginator {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 450px;
+}
+
+.paginator__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.paginator__link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #83b3d3;
+  display: block;
+  padding: 14.5px 4px;
+  box-sizing: border-box;
+  min-width: 55px;
+}
+
+.paginator__link:hover {
+  background-color: #68a2ca;
+}
+
+.paginator__link:focus {
+  outline: 3px solid #756257;
+  outline-offset: 0;
+  background-color: #68a2ca;
+}
+
+.paginator__link:active {
+  background-color: #68a2ca;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.paginator__link--active {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+

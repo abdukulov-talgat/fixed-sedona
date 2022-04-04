@@ -237,9 +237,53 @@
             </div>
           </li>
         </ol>
+        <button class="button button--coldlight products__load-more" type="button">Загрузить ещё</button>
         <div class="products__container">
-          <button class="button button--coldlight products__load-more" type="button">Загрузить ещё</button>
+          <ol class="paginator">
+            <li class="paginator__item">
+              <a class="paginator__link paginator__link--active">1</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">2</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">3</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">4</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">...</a>
+            </li>
+            <li class="paginator__item">
+              <a class="paginator__link" href="#">10</a>
+            </li>
+          </ol>
+          <label class="control-select products__control-select">
+            <span class="control-select__label">Гостиниц на странице:</span>
+            <select class="control-select__select" name="quantity" form="filter-form">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option selected>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </label>
         </div>
+      </section>
+      <section class="newsletter">
+        <div class="info newsletter__info">
+          <h2 class="info__title">Подпишитесь на рассылку</h2>
+          <p class="info__text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
+        </div>
+        <form class="newsletter__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="newsletter__label">
+            <span class="visually-hidden">Ваш e-mail</span>
+            <input class="newsletter__input" type="email" placeholder="Ваш e-mail">
+          </label>
+          <button class="button button--coldlight newsletter__button">Подписаться</button>
+        </form>
       </section>
     </main>
 
