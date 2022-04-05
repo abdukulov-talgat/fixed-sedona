@@ -1,8 +1,10 @@
 (function () {
 
   initializePopups();
+  initializeModals();
 
-  function initializePopups(){
+
+  function initializePopups() {
     const popups = document.querySelectorAll('.popup');
     const popupOpenClass = 'popup--open';
 
@@ -14,12 +16,32 @@
 
         if (isOpen) {
           popup.classList.remove(popupOpenClass);
-        }else {
+        } else {
           popup.classList.add(popupOpenClass);
-        }});
+        }
+      });
     });
   }
 
-  //TODO: Favorite add/remove
+  function initializeModals() {
+    const modalOpenClass = 'modal--open';
+    const modalSearch = document.querySelector('.modal-search');
+    const searchBtn = document.querySelector('.search__button');
 
+    if(!searchBtn) return;
+
+    searchBtn.addEventListener('click', () => modalSearch.classList.add(modalOpenClass));
+    initializeModalCloseButtons();
+
+    function initializeModalCloseButtons() {
+      const modals = document.querySelectorAll('.modal');
+
+      if(!modals) return;
+
+      modals.forEach(modal => {
+        const close = modal.querySelector('.modal__close-button');
+        close.addEventListener('click', () => modal.classList.remove(modalOpenClass));
+      });
+    }
+  }
 })();

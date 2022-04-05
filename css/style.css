@@ -368,6 +368,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .user-nav__button {
@@ -550,6 +551,8 @@ body {
 
 .newsletter--index {
   background-image: url("../img/index/newsletter-bg.jpg");
+  background-repeat: no-repeat;
+  background-color: #556975;
   color: #ffffff;
   padding: 92px 0 94px;
 }
@@ -570,6 +573,7 @@ body {
 
 .newsletter__label {
   flex-grow: 1;
+  display: flex;
 }
 
 .newsletter__input {
@@ -730,6 +734,8 @@ body {
 /* Catalog */
 .container-bg {
   background-image: url("../img/catalog/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-color: #556975;
   padding: 44px 65px 82px;
   padding-right: 72px;
 }
@@ -1318,6 +1324,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 450px;
+  margin-bottom: -8px;
+}
+
+.paginator__item {
+  margin-bottom: 8px;
 }
 
 .paginator__item:not(:last-child) {
@@ -1567,6 +1578,7 @@ body {
   text-transform: uppercase;
   color: #000000;
   margin: 0;
+  margin-right: 50px;
   margin-bottom: 61px;
   letter-spacing: -0.1px;
 }
